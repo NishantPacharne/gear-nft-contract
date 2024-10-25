@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package koincrew;
+
+import "koinos/options.proto";
+
+message boole {
+   bool value = 1;
+ }
+
+
+message gamedata {
+   bool claimed = 1;
+   uint64 reward = 2;
+   bool freegame = 3;
+}
+
+
+message gamedata_args {
+   bytes account = 1 [(koinos.btype) = ADDRESS];
+}
